@@ -6,19 +6,18 @@ let dOB = $('#dateOfBirth').val().valueOf();
 
 // let age = new Date(today - new Date(dOB)).getUTCFullYear() - 1970;
 
-
 $('body').on('click', function () {
     if ($('#driversLicenseCheckbox').is(':checked') === true)
         $('#driversLicenseInfo').removeClass('visually-hidden')
     else
         $('#driversLicenseInfo').addClass('visually-hidden')
 
-    if($('#canProvideEligibilityProof').is(':checked') === true)
+    if($('#canProvideEligibilityProofYes').is(':checked') === true)
         $('#isEligibleToWork').removeClass('visually-hidden')
     else
         $('#isEligibleToWork').addClass('visually-hidden')
 
-    if($('#isConvictedOfAFelony').is(':checked') === true)
+    if($('#isConvictedOfAFelonyYes').is(':checked') === true)
         $('#convictedFelon').removeClass('visually-hidden')
     else
         $('#convictedFelon').addClass('visually-hidden')
@@ -42,5 +41,8 @@ $('body').on('click', function () {
         $('#rvCheck').removeClass('visually-hidden')
     else
         $('#rvCheck').addClass('visually-hidden')
+
+
+
 })
 

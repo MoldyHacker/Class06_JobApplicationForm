@@ -10,7 +10,7 @@
 <div class="container">
   <header class="d-flex flex-wrap justify-content-center py-3 bg-primary">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <img class="bi me-2" alt="" src="./YellowstoneJobsApplicationForm_files/66_17_logo-yellowstone.gif">
+      <img class="bi ms-2" alt="" src="./YellowstoneJobsApplicationForm_files/66_17_logo-yellowstone.gif">
       <span class="fs-4"></span>
     </a>
 
@@ -19,8 +19,8 @@
     <div class="col col-md-2 accent"></div>
     <div class="col col-md-10 bg-secondary">
       <h1 class="text-primary">Application Form</h1>
-      <p>If you are an individual with disabilities who needs accommodation or you are having difficulty using our web site to apply for employment, please contact the Human Resources team at (307) 344-5324.</p>
-      <p>Xanterra Parks & Resorts (Authorized Concessioner of the National Park Service) is an equal opportunity employer and does not discriminate against any individual in any phase of employment on the basis of race, color, creed, religion, sexual orientation, national origin, ancestry, veteran status, age, disability or any other legally protected status under applicable law. AA/EOE M/F/D/V</p>
+      <p>If you are an individual with disabilities who needs accommodation or you are having difficulty using our website to apply for employment, please contact the Human Resources team at (307) 344-5324.</p>
+      <p>Xanterra Parks & Resorts (Authorized Concessionary of the National Park Service) is an equal opportunity employer and does not discriminate against any individual in any phase of employment on the basis of race, color, creed, religion, sexual orientation, national origin, ancestry, veteran status, age, disability or any other legally protected status under applicable law. AA/EOE M/F/D/V</p>
       <h5 class="fw-bold text-danger-emphasis">!!!!! BEFORE YOU START THIS APPLICATION !!!!!</h5>
       <p>Have you already submitted one application for this season's employment?  <strong>If so, please DO NOT submit another application!</strong>   Doing so slows your application and review process down significantly and you may lose the opportunity to be considered for the job you really want!</p>
       <p>If you need to make ANY changes to your application for employment, please email us at info@yellowstonejobs.com.</p>
@@ -70,8 +70,20 @@
           <div class="workEligibility">
             <form action="">
 
-              <label for="canProvideEligibilityProof" class="form-check-label">Can you provide proof of eligibility to work in the US? </label>
-              <input type="checkbox" id="canProvideEligibilityProof" class="form-check-input">
+<!--              <label for="canProvideEligibilityProof" class="form-check-label">Can you provide proof of eligibility to work in the US? </label>-->
+<!--              <input type="checkbox" id="canProvideEligibilityProof" class="form-check-input">-->
+
+              <div class="">
+                <span>Can you provide proof of eligibility to work in the US? </span>
+                <div class="form-check form-check-inline">
+                  <label for="canProvideEligibilityProofYes">Yes</label>
+                  <input type="radio" name="isEligible" id="canProvideEligibilityProofYes" class="form-check-input">
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="canProvideEligibilityProofNo">No</label>
+                  <input type="radio" name="isEligible" id="canProvideEligibilityProofNo" class="form-check-input">
+                </div>
+              </div>
 
               <div id="isEligibleToWork" class="visually-hidden">
                 <p class="text-danger-emphasis mt-3">INTERNATIONAL APPLICANTS YOU MUST HAVE A SPONSORING AGENCY TO CONTINUE COMPLETING THIS APPLICATION PLEASE SELECT FROM BELOW OPTIONS. THESE ARE THE ONLY SPONSORING AGENCIES WE ACCEPT.</p>
@@ -83,8 +95,19 @@
                     <option value="INTEREXCHANGE">INTEREXCHANGE </option>
                   </select>
 
-                <label for="isConvictedOfAFelony" class="form-check-label mt-3">Have you ever been convicted of a felony (including any pleas of "guilty" or "no contest") OR do you have any outstanding wants or warrants? A Background Check is completed on all employees upon arrival to Yellowstone. (Note: Conviction of a crime is not an automatic ban to employment - circumstances will be considered.)</label>
-                <input type="checkbox" id="isConvictedOfAFelony" class="form-check-input">
+
+                <div class="">
+                  <span>Have you ever been convicted of a felony (including any pleas of "guilty" or "no contest") OR do you have any outstanding wants or warrants? A Background Check is completed on all employees upon arrival to Yellowstone. (Note: Conviction of a crime is not an automatic ban to employment - circumstances will be considered.) </span>
+                  <div class="form-check form-check-inline">
+                    <label for="isConvictedOfAFelonyYes">Yes</label>
+                    <input type="radio" name="isFelon" id="isConvictedOfAFelonyYes" class="form-check-input">
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label for="isConvictedOfAFelonyNo">No</label>
+                    <input type="radio" name="isFelon" id="isConvictedOfAFelonyNo" class="form-check-input">
+                  </div>
+                </div>
+
                 <div id="convictedFelon" class="visually-hidden">
                   <label for="felonyDetails" class="form-label mt-3">State details and dates</label>
                   <input type="text" id="felonyDetails" class="form-control">
@@ -446,12 +469,35 @@
 
               <div class="form-check mt-3">
                 <label for="seasonalPosition">Seasonal Position</label>
-                <input type="radio" name="flexRadioDefault" id="seasonalPosition" class="form-check-input">
+                <input type="radio" name="lengthOfPosition" id="seasonalPosition" class="form-check-input">
               </div>
               <div class="form-check">
                 <label for="yearRoundPosition">Year Round Position</label>
-                <input type="radio" name="flexRadioDefault" id="yearRoundPosition" class="form-check-input">
+                <input type="radio" name="lengthOfPosition" id="yearRoundPosition" class="form-check-input">
               </div>
+
+              <div class="mt-3">
+                <p class="text-danger-emphasis">The Summer employment season ends near November 1st of each year. Please apply for a late October or early November end date if you are able to stay till the end of our season.</p>
+                <p class="text-danger-emphasis">Please give careful consideration to the dates of availability. Be sure to allow sufficient time to return to school or home at the end of the season. DATES WILL BECOME PART OF YOUR EMPLOYEE AGREEMENT IF HIRED!</p>
+                <span>Start Date and End Date</span>
+                <div class="input-group">
+                  <input type="date" id="startDate" class="form-control" aria-label="Start Date">
+                  <input type="date" id="endDate" class="form-control" aria-label="End Date">
+                </div>
+              </div>
+              <hr>
+              <div class="text-center">
+                <p>Would you accept a Server Assistant, Kitchen Crew, Cafeteria, Laundry, Food Service Attendant or Room Attendant position if those applied for are unavailable?</p>
+                <div class="form-check form-check-inline">
+                  <label for="servicePositionYes">Yes</label>
+                  <input type="radio" name="serviceWorkerOffering" id="servicePositionYes" class="form-check-input">
+                </div>
+                <div class="form-check form-check-inline">
+                  <label for="servicePositionNo">No</label>
+                  <input type="radio" name="serviceWorkerOffering" id="servicePositionNo" class="form-check-input">
+                </div>
+              </div>
+
 
             </form>
 
@@ -892,7 +938,7 @@
                 </div>
 
                 <div class="mt-3">
-                  <label for="rvIsGood" class="form-check-label">RV or Trailer (this is your own self contained vehicle; space is limited) </label>
+                  <label for="rvIsGood" class="form-check-label">RV or Trailer (this is your own self-contained vehicle; space is limited) </label>
                   <input type="checkbox" id="rvIsGood" class="form-check-input">
                   <div id="rvCheck">
                     <label for="rvDetails" class="form-label mt-3">RV or Trailer Details (indicate model,year,length of RV or Trailer)</label>
@@ -1079,10 +1125,10 @@
               <div id="workExperience-collapseTwo" class="accordion-collapse collapse" aria-labelledby="workExperience-headingTwo">
                 <div class="accordion-body">
                   <form class="employer" id="employerTwo">
-                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <label for="employerTwoInputName" class="form-label">Employer Name</label>
                     <input type="text" aria-label="Employer Name" class="form-control" id="employerTwoInputName" placeholder="Employer Name">
 
-                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <label for="employerTwoInputPosition" class="form-label mt-3">Position</label>
                     <input type="text" aria-label="Position" class="form-control" id="employerTwoInputPosition" placeholder="Position">
 
                     <label class="form-label mt-3">Supervisor Name and Title</label>
@@ -1097,13 +1143,13 @@
                       <input type="date" aria-label="Start Date" class="form-control" id="employerTwoEndDate">
                     </div>
 
-                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <label for="employerTwoReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
                     <input type="text" aria-label="Reason for leaving" id="employerTwoReasonForLeaving" class="form-control" placeholder="Reason for leaving">
 
-                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <label for="employerTwoDuties" class="form-label mt-3">Specific Duties</label>
                     <textarea type="text" name="" aria-label="Specific Duties" id="employerTwoDuties" class="form-control" placeholder="Specific Duties"></textarea>
 
-                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <label for="employerTwoInputPhone" class="form-label mt-3">Phone Number</label>
                     <div class="input-group">
                       <span class="input-group-text">#</span>
                       <input type="tel" class="form-control" id="employerTwoInputPhone" placeholder="888-888-8888">
@@ -1113,7 +1159,7 @@
                     <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="employerTwoContactPermission" value="TRUE">
-                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                      <label class="form-check-label" for="employerTwoContactPermission">Yes</label>
                     </div>
                   </form>
                 </div>
@@ -1128,10 +1174,10 @@
               <div id="workExperience-collapseThree" class="accordion-collapse collapse" aria-labelledby="workExperience-headingThree">
                 <div class="accordion-body">
                   <form class="employer" id="employerThree">
-                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <label for="employerThreeInputName" class="form-label">Employer Name</label>
                     <input type="text" aria-label="Employer Name" class="form-control" id="employerThreeInputName" placeholder="Employer Name">
 
-                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <label for="employerThreeInputPosition" class="form-label mt-3">Position</label>
                     <input type="text" aria-label="Position" class="form-control" id="employerThreeInputPosition" placeholder="Position">
 
                     <label class="form-label mt-3">Supervisor Name and Title</label>
@@ -1146,13 +1192,13 @@
                       <input type="date" aria-label="Start Date" class="form-control" id="employerThreeEndDate">
                     </div>
 
-                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <label for="employerThreeReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
                     <input type="text" aria-label="Reason for leaving" id="employerThreeReasonForLeaving" class="form-control" placeholder="Reason for leaving">
 
-                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <label for="employerThreeDuties" class="form-label mt-3">Specific Duties</label>
                     <textarea type="text" name="" aria-label="Specific Duties" id="employerThreeDuties" class="form-control" placeholder="Specific Duties"></textarea>
 
-                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <label for="employerThreeInputPhone" class="form-label mt-3">Phone Number</label>
                     <div class="input-group">
                       <span class="input-group-text">#</span>
                       <input type="tel" class="form-control" id="employerThreeInputPhone" placeholder="888-888-8888">
@@ -1162,7 +1208,7 @@
                     <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="employerThreeContactPermission" value="TRUE">
-                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                      <label class="form-check-label" for="employerThreeContactPermission">Yes</label>
                     </div>
                   </form>
                 </div>
@@ -1177,10 +1223,10 @@
               <div id="workExperience-collapseFour" class="accordion-collapse collapse" aria-labelledby="workExperience-headingFour">
                 <div class="accordion-body">
                   <form class="employer" id="employerFour">
-                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <label for="employerFourInputName" class="form-label">Employer Name</label>
                     <input type="text" aria-label="Employer Name" class="form-control" id="employerFourInputName" placeholder="Employer Name">
 
-                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <label for="employerFourInputPosition" class="form-label mt-3">Position</label>
                     <input type="text" aria-label="Position" class="form-control" id="employerFourInputPosition" placeholder="Position">
 
                     <label class="form-label mt-3">Supervisor Name and Title</label>
@@ -1195,13 +1241,13 @@
                       <input type="date" aria-label="Start Date" class="form-control" id="employerFourEndDate">
                     </div>
 
-                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <label for="employerFourReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
                     <input type="text" aria-label="Reason for leaving" id="employerFourReasonForLeaving" class="form-control" placeholder="Reason for leaving">
 
-                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <label for="employerFourDuties" class="form-label mt-3">Specific Duties</label>
                     <textarea type="text" name="" aria-label="Specific Duties" id="employerFourDuties" class="form-control" placeholder="Specific Duties"></textarea>
 
-                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <label for="employerFourInputPhone" class="form-label mt-3">Phone Number</label>
                     <div class="input-group">
                       <span class="input-group-text">#</span>
                       <input type="tel" class="form-control" id="employerFourInputPhone" placeholder="888-888-8888">
@@ -1211,7 +1257,7 @@
                     <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="employerFourContactPermission" value="TRUE">
-                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                      <label class="form-check-label" for="employerFourContactPermission">Yes</label>
                     </div>
                   </form>
                 </div>
@@ -1398,26 +1444,6 @@
   </div>
 </footer>
 
-
-
-
-<!--TODO Tabs to separate progress-->
-
-<!--TODO today's Date added via js-->
-
-
-
-<!--TODO only one phone# add dropdown next to it to specify what kind of phone it is-->
-<!--TODO add button for second phone#-->
-<!--TODO positions applied for add via button-->
-<!--TODO employers add via button-->
-<!--TODO education add via button-->
-
-<!--TODO drivers license field hidden until JS validation from applied positions-->
-
-
-
-<!--TODO national park contact info in footer-->
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
