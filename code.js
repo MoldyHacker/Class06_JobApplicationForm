@@ -5,3 +5,11 @@ if(today === '2023-02-08'){
 
 $('.date').append(today);
 
+$('body').on('click', function () {
+    if ($('#driversLicenseCheckbox').is(':checked') === true)
+        $('#driversLicenseInfo').removeClass('visually-hidden')
+    else
+        $('#driversLicenseInfo').addClass('visually-hidden')
+
+})
+
