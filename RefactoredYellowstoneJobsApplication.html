@@ -25,12 +25,7 @@
       <p>Have you already submitted one application for this season's employment?  <strong>If so, please DO NOT submit another application!</strong>   Doing so slows your application and review process down significantly and you may lose the opportunity to be considered for the job you really want!</p>
       <p>If you need to make ANY changes to your application for employment, please email us at info@yellowstonejobs.com.</p>
       <p>Directions: Please follow these directions when completing this form:</p>
-      <p>PLEASE DO NOT APPLY MORE THAN ONCE PER SEASON. You may email application changes to info@yellowstonejobs.com.
-        A positive letter of recommendation is required and must be sent before you can begin employment. A background check is also a condition of employment and will be done on every employee. Send letter of recommendation to:</p>
-      <p>Yellowstone National Park Lodges, Human Resource</p>
-      <p>PO Box 165, YNP</p>
-      <p>WY 82190</p>
-      <p>Telephone: (307) 344- 5324  &nbsp;&nbsp;&nbsp;   FAX: (307) 344 - 5441  &nbsp;&nbsp;&nbsp;   E-mail: info@yellowstonejobs.com</p>
+
       <p class="date"><strong>Today's Date:</strong> </p>
       <br>
 
@@ -43,11 +38,12 @@
 
       <nav>
         <div class="nav nav-pills" id="nav-tab" role="tablist">
-          <button class="nav-link active" id="nav-appliedPosition-tab" data-bs-toggle="tab" data-bs-target="#nav-appliedPosition" type="button" role="tab" aria-controls="nav-appliedPosition" aria-selected="true">Applied Position</button>
+          <button class="nav-link active" id="nav-workEligibility-tab" data-bs-toggle="tab" data-bs-target="#nav-workEligibility" type="button" role="tab" aria-controls="nav-workEligibility" aria-selected="false">Work Eligibility</button>
+          <button class="nav-link" id="nav-appliedPosition-tab" data-bs-toggle="tab" data-bs-target="#nav-appliedPosition" type="button" role="tab" aria-controls="nav-appliedPosition" aria-selected="true">Applied Position</button>
           <button class="nav-link" id="nav-personalInformation-tab" data-bs-toggle="tab" data-bs-target="#nav-personalInformation" type="button" role="tab" aria-controls="nav-personalInformation" aria-selected="false">Personal Information</button>
-          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-          <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-          <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+          <button class="nav-link" id="nav-workExperience-tab" data-bs-toggle="tab" data-bs-target="#nav-workExperience" type="button" role="tab" aria-controls="nav-workExperience" aria-selected="false">Work Experience</button>
+          <button class="nav-link" id="nav-educationalExperience-tab" data-bs-toggle="tab" data-bs-target="#nav-educationalExperience" type="button" role="tab" aria-controls="nav-educationalExperience" aria-selected="false">Educational Experience</button>
+          <button class="nav-link" id="nav-terms-tab" data-bs-toggle="tab" data-bs-target="#nav-terms" type="button" role="tab" aria-controls="nav-terms" aria-selected="false">Terms</button>
         </div>
       </nav>
 
@@ -58,15 +54,53 @@
 
       <div class="tab-content" id="nav-tabContent">
 
+<!--        <div class="tab-pane fade show active" id="nav-placeHolderText" role="tabpanel" aria-labelledby="nav-placeHolderText-tab" tabindex="0">-->
+<!--          <div class="placeHolderText">-->
+<!--            <form action="">-->
+
+<!--            </form>-->
+
+<!--          </div>-->
+<!--        </div>-->
 
 
 
+        <!-- Work Eligibility -->
+        <div class="tab-pane fade show active" id="nav-workEligibility" role="tabpanel" aria-labelledby="nav-workEligibility-tab" tabindex="0">
+          <div class="workEligibility">
+            <form action="">
+
+              <label for="canProvideEligibilityProof" class="form-check-label">Can you provide proof of eligibility to work in the US? </label>
+              <input type="checkbox" id="canProvideEligibilityProof" class="form-check-input">
+
+              <div id="isEligibleToWork" class="visually-hidden">
+                <p class="text-danger-emphasis mt-3">INTERNATIONAL APPLICANTS YOU MUST HAVE A SPONSORING AGENCY TO CONTINUE COMPLETING THIS APPLICATION PLEASE SELECT FROM BELOW OPTIONS. THESE ARE THE ONLY SPONSORING AGENCIES WE ACCEPT.</p>
+                  <select aria-label="International Sponsor" id="internationalSponsor" name="APL-REF-LST-NAME" size="1">
+                    <option selected="selected" value="">PLEASE SELECT FROM THE FOLLOWING: </option>
+                    <option value="ASPIRE">ASPIRE </option>
+                    <option value="CIEE">CIEE </option>
+                    <option value="CCUSA">CCUSA </option>
+                    <option value="INTEREXCHANGE">INTEREXCHANGE </option>
+                  </select>
+
+                <label for="isConvictedOfAFelony" class="form-check-label mt-3">Have you ever been convicted of a felony (including any pleas of "guilty" or "no contest") OR do you have any outstanding wants or warrants? A Background Check is completed on all employees upon arrival to Yellowstone. (Note: Conviction of a crime is not an automatic ban to employment - circumstances will be considered.)</label>
+                <input type="checkbox" id="isConvictedOfAFelony" class="form-check-input">
+                <div id="convictedFelon" class="visually-hidden">
+                  <label for="felonyDetails" class="form-label mt-3">State details and dates</label>
+                  <input type="text" id="felonyDetails" class="form-control">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
 
 
 
-        <!-- application position-->
+        <!-- Application Position-->
         <!-- TODO work on applied position text-->
-        <div class="tab-pane fade show active" id="nav-appliedPosition" role="tabpanel" aria-labelledby="nav-appliedPosition-tab" tabindex="0">
+        <div class="tab-pane fade" id="nav-appliedPosition" role="tabpanel" aria-labelledby="nav-appliedPosition-tab" tabindex="0">
           <div class="applicationPositions">
             <p>Please select the position(s) that you are applying for in order of preference.</p>
             <p>Asterisks (***) by a job position indicates that little or no experience needed.</p>
@@ -406,15 +440,26 @@
                 </div>
               </div>
 
-              <label for="applicationPositionOther" class="form-label mt-3">If position not listed above please enter it in the box</label>
+              <label for="applicationPositionOther" class="form-label mt-3">If you'd like to apply for a different seasonal position or year round/long season position --
+                please enter the name of the job into the following box.</label>
               <input type="text" class="form-control" id="applicationPositionOther">
+
+              <div class="form-check mt-3">
+                <label for="seasonalPosition">Seasonal Position</label>
+                <input type="radio" name="flexRadioDefault" id="seasonalPosition" class="form-check-input">
+              </div>
+              <div class="form-check">
+                <label for="yearRoundPosition">Year Round Position</label>
+                <input type="radio" name="flexRadioDefault" id="yearRoundPosition" class="form-check-input">
+              </div>
 
             </form>
 
           </div>
         </div>
 
-        <!--  Personal Information-->
+
+        <!-- Personal Information-->
         <div class="tab-pane fade" id="nav-personalInformation" role="tabpanel" aria-labelledby="nav-personalInformation-tab" tabindex="0">
           <div class="personalInfo">
             <form action="">
@@ -676,14 +721,26 @@
                 <option value="ZW">Zimbabwe </option>
               </select>
 
-              <label for="personalPhone" class="form-label mt-3">Phone Number</label>
-              <input type="tel" aria-label="Phone Number" class="form-control" id="personalPhone" placeholder="888-888-8888">
+              <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                  <label for="personalPhone" class="form-label mt-3">Phone Number</label>
+                  <input type="tel" aria-label="Phone Number" class="form-control" id="personalPhone" placeholder="888-888-8888">
+                </div>
+                <div class="col">
+                  <label for="personalEmail" class="form-label mt-3">E-mail</label>
+                  <input type="email" aria-label="email" class="form-control" id="personalEmail" placeholder="example@example.com">
+                </div>
+              </div>
 
-              <label for="personalEmail" class="form-label mt-3">Phone Number</label>
-              <input type="email" aria-label="email" class="form-control" id="personalEmail" placeholder="example@example.com">
+              <label for="dateOfBirth" class="form-label mt-3">Date of Birth</label>
+              <input type="date" id="dateOfBirth" class="form-control" aria-label="Date of Birth">
+              <div id="dOB">
+                <span id="isOver18" class="visually-hidden">Is over 18: </span>
+                <span id="isOVer21" class="visually-hidden">Is over 21: </span>
+              </div>
 
               <div class="driversLicenseSection mt-3">
-                <label for="driversLicenseCheckbox" class="form-check-label">You have a valid driver's license</label>
+                <label for="driversLicenseCheckbox" class="form-check-label">Do you have a valid driver's license</label>
                 <input type="checkbox" class="form-check-input" value="" id="driversLicenseCheckbox">
                 <div id="driversLicenseInfo" class="mt-3 visually-hidden">
                   <div class="row row-cols-1 row-cols-md-3">
@@ -756,6 +813,102 @@
                   </div>
                 </div>
               </div>
+              <hr>
+
+
+
+
+              <div class="mt-3">
+                <label for="relatedToNPSWorker" class="form-check-label">Are you a spouse, dependent, relative, or Domestic Partner of a National Park Service employee? </label>
+                <input type="checkbox" id="relatedToNPSWorker" class="form-check-input">
+              </div>
+              <div id="relatedNPSWorker">
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="col">
+                    <label for="relatedNPSName" class="form-label mt-3">Please enter their name(s)</label>
+                    <input type="text" id="relatedNPSName" class="form-control">
+                  </div>
+                  <div class="col">
+                    <label for="NPSEmployeeLocation" class="form-label mt-3">Select last location worked</label>
+                    <select id="NPSEmployeeLocation" class="form-select">
+                      <option selected="selected" value="">Select One</option>
+                      <option value="CORPORATE HEADQUATERS">Corporate Headquarters</option>
+                      <option value="BRYCE CANYON LODGE">Bryce Canyon Lodge</option>
+                      <option value="BURR OAK STATE PARK">Burr Oak State Park</option>
+                      <option value="CRATER LAKE NATIONAL PARK">Crater Lake National Park</option>
+                      <option value="EVERGLADES NATIONAL PARK">Everglades National Park</option>
+                      <option value="FURNACE CREEK INN AND RANCH">Furnace Creek Inn and Ranch</option>
+                      <option value="GENEVA MARINA">Geneva Marina</option>
+                      <option value="GIDEON PUTNAM">Gideon Putnam</option>
+                      <option value="GRAND CANYON NATIONAL PARK - NORTH RIM">Grand Canyon National Park - North Rim</option>
+                      <option value="GRAND CANYON NATIONAL PARK - SOUTH RIM">Grand Canyon National Park - South Rim</option>
+                      <option value="HUESTON WOODS">Hueston Woods</option>
+                      <option value="MAUMEE BAY STATE PARK">Maumee Bay State Park</option>
+                      <option value="MOHICAN BAY STATE PARK RESORT AND CONFERENCE CENTER">Mohican State Park Resort and Conference Center</option>
+                      <option value="MOUNT RUSHMORE">Mount Rushmore</option>
+                      <option value="PAINTED DESERT OASIS">Painted Desert Oasis</option>
+                      <option value="PUNDERSON MANOR">Punderson Manor</option>
+                      <option value="SALT FORK RESORT AND STATE PARK">Salt Fork Resort and State Park</option>
+                      <option value="SCOTTYS CASTLE">Scotty's Castle</option>
+                      <option value="SHAWNEE STATE PARK">Shawnee State Park</option>
+                      <option value="SILVERADO COUNTRY CLUB AND RESORT">Silverado Country Club and Resort</option>
+                      <option value="STOVEPIPE WELLS">Stovepipe Wells</option>
+                      <option value="YELLOWSTONE NATIONAL PARK">Yellowstone National Park</option>
+                      <option value="ZION NATIONAL PARK">Zion National Park</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label for="NPSRelative" class="form-label">For certain positions and certain reporting relationships, we are unable to employ family relatives. Please identify relative(s) currently employed by Xanterra Parks and Resorts, Amfac Park and Resorts, Fred Harvey or TWRS company.</label>
+                  <input type="text" name="" id="NPSRelative" class="form-control">
+                </div>
+
+              </div>
+              <hr>
+
+              <div class="coApplicant mt-3">
+
+                <label for="coApplicant" class="form-label">Applying with a friend or spouse? Please provide their FULL name:</label>
+                <input type="text" id="coApplicant" class="form-control">
+
+                <div class="mt-3">
+                  <label for="areTravelingTogether" class="form-check-label">Check the box if you are traveling together(Dates should match) </label>
+                  <input type="checkbox" id="areTravelingTogether" class="form-check-input">
+                </div>
+
+                <div class="mt-3">
+                  <label for="areWorkingTogether" class="form-check-label">Check the box if you would like to work in the same location </label>
+                  <input type="checkbox" id="areWorkingTogether" class="form-check-input">
+                </div>
+              </div>
+              <hr>
+
+              <div class="housing mt-3">
+                <p class="text-center">If you are hired and meet housing requirements, please indicate your housing preference</p>
+                <div class="mt-3">
+                  <label for="dormIsGood" class="form-check-label">Dormitory (must be 18 years or older; no housing available for children or pets) </label>
+                  <input type="checkbox" id="dormIsGood" class="form-check-input">
+                </div>
+
+                <div class="mt-3">
+                  <label for="rvIsGood" class="form-check-label">RV or Trailer (this is your own self contained vehicle; space is limited) </label>
+                  <input type="checkbox" id="rvIsGood" class="form-check-input">
+                  <div id="rvCheck">
+                    <label for="rvDetails" class="form-label mt-3">RV or Trailer Details (indicate model,year,length of RV or Trailer)</label>
+                    <input type="text" id="rvDetails" class="form-control">
+                  </div>
+                </div>
+
+                <div class="mt-3">
+                  <label for="localResident" class="form-check-label">Local Resident </label>
+                  <input type="checkbox" id="localResident" class="form-check-input">
+                </div>
+
+
+              </div>
+
+
 
 <!--            <button type="button" class="btn btn-lg btn-primary my-3 d-grid gap-2 col-6 mx-auto" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Next</button>-->
 
@@ -764,21 +917,460 @@
         </div>
 
 
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+        <!-- Work Experience-->
+        <!-- TODO Work Experience-->
+        <div class="tab-pane fade" id="nav-workExperience" role="tabpanel" aria-labelledby="nav-workExperience-tab" tabindex="0">
+          <div id="generalInfo">
 
+            <label for="previousResortWork" class="form-check-label">Have you ever worked for Xanterra Parks and Resorts, Amfac Park and Resorts, Fred Harvey or TWRS company? </label>
+            <input type="checkbox" id="previousResortWork" class="form-check-input">
+            <div id="resortsWork">
+              <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                  <label for="employeeID" class="form-label mt-3">Please enter your employee number</label>
+                  <input type="text" id="employeeID" class="form-control" placeholder="Employee Number" aria-label="Employee Number">
+                </div>
+                <div class="col">
+                  <label for="previousWorkLocation" class="form-label mt-3">Select last location worked</label>
+                  <select id="previousWorkLocation" class="form-select">
+                    <option selected="selected" value="">Select One</option>
+                    <option value="CORPORATE HEADQUATERS">Corporate Headquarters</option>
+                    <option value="BRYCE CANYON LODGE">Bryce Canyon Lodge</option>
+                    <option value="BURR OAK STATE PARK">Burr Oak State Park</option>
+                    <option value="CRATER LAKE NATIONAL PARK">Crater Lake National Park</option>
+                    <option value="EVERGLADES NATIONAL PARK">Everglades National Park</option>
+                    <option value="FURNACE CREEK INN AND RANCH">Furnace Creek Inn and Ranch</option>
+                    <option value="GENEVA MARINA">Geneva Marina</option>
+                    <option value="GIDEON PUTNAM">Gideon Putnam</option>
+                    <option value="GRAND CANYON NATIONAL PARK - NORTH RIM">Grand Canyon National Park - North Rim</option>
+                    <option value="GRAND CANYON NATIONAL PARK - SOUTH RIM">Grand Canyon National Park - South Rim</option>
+                    <option value="HUESTON WOODS">Hueston Woods</option>
+                    <option value="MAUMEE BAY STATE PARK">Maumee Bay State Park</option>
+                    <option value="MOHICAN BAY STATE PARK RESORT AND CONFERENCE CENTER">Mohican State Park Resort and Conference Center</option>
+                    <option value="MOUNT RUSHMORE">Mount Rushmore</option>
+                    <option value="PAINTED DESERT OASIS">Painted Desert Oasis</option>
+                    <option value="PUNDERSON MANOR">Punderson Manor</option>
+                    <option value="SALT FORK RESORT AND STATE PARK">Salt Fork Resort and State Park</option>
+                    <option value="SCOTTYS CASTLE">Scotty's Castle</option>
+                    <option value="SHAWNEE STATE PARK">Shawnee State Park</option>
+                    <option value="SILVERADO COUNTRY CLUB AND RESORT">Silverado Country Club and Resort</option>
+                    <option value="STOVEPIPE WELLS">Stovepipe Wells</option>
+                    <option value="YELLOWSTONE NATIONAL PARK">Yellowstone National Park</option>
+                    <option value="ZION NATIONAL PARK">Zion National Park</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <span>Enter Start Date and End Date</span>
+                <div class="input-group">
+                  <input type="date" id="previousResortWorkStartDate" class="form-control" aria-label="Previous Resort Work Start Date">
+                  <input type="date" id="previousResortWorkEndDate" class="form-control" aria-label="Previous resort work end date">
+                </div>
+                <hr>
+              </div>
+
+              <div class="mt-3">
+                <label for="previousResortWorkDiffName" class="form-check-label">Have you ever been employed under a different name with any Xanterra Parks and Resorts, Amfac Parks and Resorts, Fred Harvey or TWRS company? </label>
+                <input type="checkbox" id="previousResortWorkDiffName" class="form-check-input">
+              </div>
+              <div id="resortsWorkDiffName">
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="col">
+                    <label for="previousName" class="form-label mt-3">Please enter your previous name(s)</label>
+                    <input type="text" id="previousName" class="form-control">
+                  </div>
+                  <div class="col">
+                    <label for="previousWorkLocationDiffName" class="form-label mt-3">Select last location worked</label>
+                    <select id="previousWorkLocationDiffName" class="form-select">
+                      <option selected="selected" value="">Select One</option>
+                      <option value="CORPORATE HEADQUATERS">Corporate Headquarters</option>
+                      <option value="BRYCE CANYON LODGE">Bryce Canyon Lodge</option>
+                      <option value="BURR OAK STATE PARK">Burr Oak State Park</option>
+                      <option value="CRATER LAKE NATIONAL PARK">Crater Lake National Park</option>
+                      <option value="EVERGLADES NATIONAL PARK">Everglades National Park</option>
+                      <option value="FURNACE CREEK INN AND RANCH">Furnace Creek Inn and Ranch</option>
+                      <option value="GENEVA MARINA">Geneva Marina</option>
+                      <option value="GIDEON PUTNAM">Gideon Putnam</option>
+                      <option value="GRAND CANYON NATIONAL PARK - NORTH RIM">Grand Canyon National Park - North Rim</option>
+                      <option value="GRAND CANYON NATIONAL PARK - SOUTH RIM">Grand Canyon National Park - South Rim</option>
+                      <option value="HUESTON WOODS">Hueston Woods</option>
+                      <option value="MAUMEE BAY STATE PARK">Maumee Bay State Park</option>
+                      <option value="MOHICAN BAY STATE PARK RESORT AND CONFERENCE CENTER">Mohican State Park Resort and Conference Center</option>
+                      <option value="MOUNT RUSHMORE">Mount Rushmore</option>
+                      <option value="PAINTED DESERT OASIS">Painted Desert Oasis</option>
+                      <option value="PUNDERSON MANOR">Punderson Manor</option>
+                      <option value="SALT FORK RESORT AND STATE PARK">Salt Fork Resort and State Park</option>
+                      <option value="SCOTTYS CASTLE">Scotty's Castle</option>
+                      <option value="SHAWNEE STATE PARK">Shawnee State Park</option>
+                      <option value="SILVERADO COUNTRY CLUB AND RESORT">Silverado Country Club and Resort</option>
+                      <option value="STOVEPIPE WELLS">Stovepipe Wells</option>
+                      <option value="YELLOWSTONE NATIONAL PARK">Yellowstone National Park</option>
+                      <option value="ZION NATIONAL PARK">Zion National Park</option>
+                    </select>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+            <hr>
+          <p class="mt-3">Start with most recent positions.</p>
+
+          <div class="accordion" id="accordionWorkExperience">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="workExperience-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseOne" aria-expanded="true" aria-controls="workExperience-collapseOne">
+                  Employer #1
+                </button>
+              </h2>
+              <div id="workExperience-collapseOne" class="accordion-collapse collapse show" aria-labelledby="workExperience-headingOne">
+                <div class="accordion-body">
+                  <form class="employer" id="employerOne">
+                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <input type="text" aria-label="Employer Name" class="form-control" id="employerOneInputName" placeholder="Employer Name">
+
+                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <input type="text" aria-label="Position" class="form-control" id="employerOneInputPosition" placeholder="Position">
+
+                    <label class="form-label mt-3">Supervisor Name and Title</label>
+                    <div class="input-group">
+                      <input type="text" aria-label="Supervisor Name" class="form-control" id="employerOneSupervisorName" placeholder="Supervisor Name">
+                      <input type="text" aria-label="Supervisor Title" class="form-control" id="employerOneSupervisorTitle" placeholder="Supervisor Title">
+                    </div>
+
+                    <label class="form-label mt-3"> Start Date and End Date</label>
+                    <div class="input-group">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerOneStartDate">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerOneEndDate">
+                    </div>
+
+                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <input type="text" aria-label="Reason for leaving" id="employerOneReasonForLeaving" class="form-control" placeholder="Reason for leaving">
+
+                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <textarea type="text" name="" aria-label="Specific Duties" id="employerOneDuties" class="form-control" placeholder="Specific Duties"></textarea>
+
+                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <div class="input-group">
+                      <span class="input-group-text">#</span>
+                      <input type="tel" class="form-control" id="employerOneInputPhone" placeholder="888-888-8888">
+                    </div>
+                    <div class="form-text">If your employer is outside the USA please prefix the number with the appropriate country code.</div>
+
+                    <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="employerOneContactPermission" value="TRUE">
+                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="workExperience-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseTwo" aria-expanded="false" aria-controls="workExperience-collapseTwo">
+                  Employer #2
+                </button>
+              </h2>
+              <div id="workExperience-collapseTwo" class="accordion-collapse collapse" aria-labelledby="workExperience-headingTwo">
+                <div class="accordion-body">
+                  <form class="employer" id="employerTwo">
+                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <input type="text" aria-label="Employer Name" class="form-control" id="employerTwoInputName" placeholder="Employer Name">
+
+                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <input type="text" aria-label="Position" class="form-control" id="employerTwoInputPosition" placeholder="Position">
+
+                    <label class="form-label mt-3">Supervisor Name and Title</label>
+                    <div class="input-group">
+                      <input type="text" aria-label="Supervisor Name" class="form-control" id="employerTwoSupervisorName" placeholder="Supervisor Name">
+                      <input type="text" aria-label="Supervisor Title" class="form-control" id="employerTwoSupervisorTitle" placeholder="Supervisor Title">
+                    </div>
+
+                    <label class="form-label mt-3"> Start Date and End Date</label>
+                    <div class="input-group">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerTwoStartDate">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerTwoEndDate">
+                    </div>
+
+                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <input type="text" aria-label="Reason for leaving" id="employerTwoReasonForLeaving" class="form-control" placeholder="Reason for leaving">
+
+                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <textarea type="text" name="" aria-label="Specific Duties" id="employerTwoDuties" class="form-control" placeholder="Specific Duties"></textarea>
+
+                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <div class="input-group">
+                      <span class="input-group-text">#</span>
+                      <input type="tel" class="form-control" id="employerTwoInputPhone" placeholder="888-888-8888">
+                    </div>
+                    <div class="form-text">If your employer is outside the USA please prefix the number with the appropriate country code.</div>
+
+                    <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="employerTwoContactPermission" value="TRUE">
+                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="workExperience-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseThree" aria-expanded="false" aria-controls="workExperience-collapseThree">
+                  Employer #3
+                </button>
+              </h2>
+              <div id="workExperience-collapseThree" class="accordion-collapse collapse" aria-labelledby="workExperience-headingThree">
+                <div class="accordion-body">
+                  <form class="employer" id="employerThree">
+                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <input type="text" aria-label="Employer Name" class="form-control" id="employerThreeInputName" placeholder="Employer Name">
+
+                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <input type="text" aria-label="Position" class="form-control" id="employerThreeInputPosition" placeholder="Position">
+
+                    <label class="form-label mt-3">Supervisor Name and Title</label>
+                    <div class="input-group">
+                      <input type="text" aria-label="Supervisor Name" class="form-control" id="employerThreeSupervisorName" placeholder="Supervisor Name">
+                      <input type="text" aria-label="Supervisor Title" class="form-control" id="employerThreeSupervisorTitle" placeholder="Supervisor Title">
+                    </div>
+
+                    <label class="form-label mt-3"> Start Date and End Date</label>
+                    <div class="input-group">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerThreeStartDate">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerThreeEndDate">
+                    </div>
+
+                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <input type="text" aria-label="Reason for leaving" id="employerThreeReasonForLeaving" class="form-control" placeholder="Reason for leaving">
+
+                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <textarea type="text" name="" aria-label="Specific Duties" id="employerThreeDuties" class="form-control" placeholder="Specific Duties"></textarea>
+
+                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <div class="input-group">
+                      <span class="input-group-text">#</span>
+                      <input type="tel" class="form-control" id="employerThreeInputPhone" placeholder="888-888-8888">
+                    </div>
+                    <div class="form-text">If your employer is outside the USA please prefix the number with the appropriate country code.</div>
+
+                    <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="employerThreeContactPermission" value="TRUE">
+                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="workExperience-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseFour" aria-expanded="false" aria-controls="workExperience-collapseFour">
+                  Employer #3
+                </button>
+              </h2>
+              <div id="workExperience-collapseFour" class="accordion-collapse collapse" aria-labelledby="workExperience-headingFour">
+                <div class="accordion-body">
+                  <form class="employer" id="employerFour">
+                    <label for="employerOneInputName" class="form-label">Employer Name</label>
+                    <input type="text" aria-label="Employer Name" class="form-control" id="employerFourInputName" placeholder="Employer Name">
+
+                    <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
+                    <input type="text" aria-label="Position" class="form-control" id="employerFourInputPosition" placeholder="Position">
+
+                    <label class="form-label mt-3">Supervisor Name and Title</label>
+                    <div class="input-group">
+                      <input type="text" aria-label="Supervisor Name" class="form-control" id="employerFourSupervisorName" placeholder="Supervisor Name">
+                      <input type="text" aria-label="Supervisor Title" class="form-control" id="employerFourSupervisorTitle" placeholder="Supervisor Title">
+                    </div>
+
+                    <label class="form-label mt-3"> Start Date and End Date</label>
+                    <div class="input-group">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerFourStartDate">
+                      <input type="date" aria-label="Start Date" class="form-control" id="employerFourEndDate">
+                    </div>
+
+                    <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
+                    <input type="text" aria-label="Reason for leaving" id="employerFourReasonForLeaving" class="form-control" placeholder="Reason for leaving">
+
+                    <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
+                    <textarea type="text" name="" aria-label="Specific Duties" id="employerFourDuties" class="form-control" placeholder="Specific Duties"></textarea>
+
+                    <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
+                    <div class="input-group">
+                      <span class="input-group-text">#</span>
+                      <input type="tel" class="form-control" id="employerFourInputPhone" placeholder="888-888-8888">
+                    </div>
+                    <div class="form-text">If your employer is outside the USA please prefix the number with the appropriate country code.</div>
+
+                    <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="employerFourContactPermission" value="TRUE">
+                      <label class="form-check-label" for="employerOneContactPermission">Yes</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
         </div>
 
 
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...
+        <!-- Educational Experience-->
+        <div class="tab-pane fade" id="nav-educationalExperience" role="tabpanel" aria-labelledby="nav-educationalExperience-tab" tabindex="0">
+          <div class="accordion" id="accordionEducationalExperience">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="educationalExperience-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseOne" aria-expanded="true" aria-controls="educationalExperience-collapseOne">
+                  Educational Institution #1
+                </button>
+              </h2>
+              <div id="educationalExperience-collapseOne" class="accordion-collapse collapse show" aria-labelledby="educationalExperience-headingOne">
+                <div class="accordion-body">
+                  <form action="" class="education" id="educationOne">
+                    <label for="educationOneInputName" class="form-label">Name of School</label>
+                    <input type="text" aria-label="Name of School" class="form-control" id="educationOneInputName" placeholder="Name of School">
 
+                    <label for="educationOneInputLocation" class="form-label mt-3">Location</label>
+                    <input type="text" aria-label="Location" class="form-control" id="educationOneInputLocation" placeholder="Location">
+
+                    <label for="educationOneInputDegree" class="form-label mt-3">Degree Received</label>
+                    <input type="text" aria-label="Degree Received" class="form-control" id="educationOneInputDegree" placeholder="Degree Received">
+
+                    <label for="educationOneInputFieldOfStudy" class="form-label mt-3">Field of Study</label>
+                    <input type="text" aria-label="Field of Study" class="form-control" id="educationOneInputFieldOfStudy" placeholder="Field of Study">
+
+                    <label for="educationalOneInputGraduationYear" class="form-label mt-3">Graduation Year</label>
+                    <input type="text" aria-label="Graduation Year" class="form-control" id="educationalOneInputGraduationYear" placeholder="2000">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="educationalExperience-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseTwo" aria-expanded="false" aria-controls="educationalExperience-collapseTwo">
+                  Educational Institution #2
+                </button>
+              </h2>
+              <div id="educationalExperience-collapseTwo" class="accordion-collapse collapse" aria-labelledby="educationalExperience-headingTwo">
+                <div class="accordion-body">
+                  <form action="" class="education" id="educationTwo">
+                    <label for="educationOneInputName" class="form-label">Name of School</label>
+                    <input type="text" aria-label="Name of School" class="form-control" id="educationTwoInputName" placeholder="Name of School">
+
+                    <label for="educationOneInputLocation" class="form-label mt-3">Location</label>
+                    <input type="text" aria-label="Location" class="form-control" id="educationTwoInputLocation" placeholder="Location">
+
+                    <label for="educationOneInputDegree" class="form-label mt-3">Degree Received</label>
+                    <input type="text" aria-label="Degree Received" class="form-control" id="educationTwoInputDegree" placeholder="Degree Received">
+
+                    <label for="educationOneInputFieldOfStudy" class="form-label mt-3">Field of Study</label>
+                    <input type="text" aria-label="Field of Study" class="form-control" id="educationTwoInputFieldOfStudy" placeholder="Field of Study">
+
+                    <label for="educationalOneInputGraduationYear" class="form-label mt-3">Graduation Year</label>
+                    <input type="text" aria-label="Graduation Year" class="form-control" id="educationalTwoInputGraduationYear" placeholder="2000">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="educationalExperience-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseThree" aria-expanded="false" aria-controls="educationalExperience-collapseThree">
+                  Educational Institution #3
+                </button>
+              </h2>
+              <div id="educationalExperience-collapseThree" class="accordion-collapse collapse" aria-labelledby="educationalExperience-headingThree">
+                <div class="accordion-body">
+                  <form action="" class="education" id="educationThree">
+                    <label for="educationOneInputName" class="form-label">Name of School</label>
+                    <input type="text" aria-label="Name of School" class="form-control" id="educationThreeInputName" placeholder="Name of School">
+
+                    <label for="educationOneInputLocation" class="form-label mt-3">Location</label>
+                    <input type="text" aria-label="Location" class="form-control" id="educationThreeInputLocation" placeholder="Location">
+
+                    <label for="educationOneInputDegree" class="form-label mt-3">Degree Received</label>
+                    <input type="text" aria-label="Degree Received" class="form-control" id="educationThreeInputDegree" placeholder="Degree Received">
+
+                    <label for="educationOneInputFieldOfStudy" class="form-label mt-3">Field of Study</label>
+                    <input type="text" aria-label="Field of Study" class="form-control" id="educationThreeInputFieldOfStudy" placeholder="Field of Study">
+
+                    <label for="educationalOneInputGraduationYear" class="form-label mt-3">Graduation Year</label>
+                    <input type="text" aria-label="Graduation Year" class="form-control" id="educationalThreeInputGraduationYear" placeholder="2000">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="educationalExperience-headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseFour" aria-expanded="false" aria-controls="educationalExperience-collapseFour">
+                  Educational Institution #4
+                </button>
+              </h2>
+              <div id="educationalExperience-collapseFour" class="accordion-collapse collapse" aria-labelledby="educationalExperience-headingFour">
+                <div class="accordion-body">
+                  <form action="" class="education" id="educationFour">
+                    <label for="educationOneInputName" class="form-label">Name of School</label>
+                    <input type="text" aria-label="Name of School" class="form-control" id="educationFourInputName" placeholder="Name of School">
+
+                    <label for="educationOneInputLocation" class="form-label mt-3">Location</label>
+                    <input type="text" aria-label="Location" class="form-control" id="educationFourInputLocation" placeholder="Location">
+
+                    <label for="educationOneInputDegree" class="form-label mt-3">Degree Received</label>
+                    <input type="text" aria-label="Degree Received" class="form-control" id="educationFourInputDegree" placeholder="Degree Received">
+
+                    <label for="educationOneInputFieldOfStudy" class="form-label mt-3">Field of Study</label>
+                    <input type="text" aria-label="Field of Study" class="form-control" id="educationFourInputFieldOfStudy" placeholder="Field of Study">
+
+                    <label for="educationalOneInputGraduationYear" class="form-label mt-3">Graduation Year</label>
+                    <input type="text" aria-label="Graduation Year" class="form-control" id="educationalFourInputGraduationYear" placeholder="2000">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <label for="additionalEducation" class="form-label mt-3">Additional School / Training / Special Skills</label>
+          <input type="text" name="" id="additionalEducation" class="form-control" placeholder="Additional School / Training / Special Skills" aria-label="Additional School / Training / Special Skills">
         </div>
 
 
-        <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...
 
+        <div class="tab-pane fade" id="nav-terms" role="tabpanel" aria-labelledby="nav-terms-tab" tabindex="0">
+          <div class="terms text-center">
+            <form action="">
+              <h1 class="">READ CAREFULLY BEFORE SUBMITTING THIS APPLICATION</h1>
+              <p class="">By submitting this form, I declare my answers to the questions on this application and any attachment, i.e. resume,
+                etc., are true and accurate. Attachments CANNOT be sent with this online application. You must send attachments
+                to us by e-mail or fax. FAX:(307) 344-5441 E-mail: <a href="mailto:info@yellowstonejobs.com">info@yellowstonejobs.com</a>.
+                I authorize Xanterra Parks and Resorts and any accredited
+                public or private investigative agency or individual conducting my background investigation
+                to obtain and release any information relating to my background from individuals, schools,
+                employers, criminal justice agencies, governmental agencies, financial institutions,
+                credit bureaus, licensing agencies, or other sources of information in accordance with
+                applicable laws for purposes of making a determination of my suitability or eligibility
+                for employment. If employed, I understand that I must abide by the company's rules and
+                regulations. I hereby consent to a drug screen as a condition of employment, if required.
+                I understand this document, any offer of employment or any other employment related
+                information does not constitute an employment contract. I understand employment is not
+                a specified term and is at the mutual consent of the employee and company. Accordingly,
+                either the employee or the company can terminate employment at will, with or without
+                cause, at any time.</p>
+              <label for="doesAgreeToTerms" class="form-check-label">If you have read, understand and agree to the above information, please check this box</label>
+              <input type="checkbox" id="doesAgreeToTerms" class="form-check-input">
+            </form>
+            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+          </div>
         </div>
+
+
+
       </div>
 
 
@@ -793,173 +1385,18 @@
   <hr>
   <br>
 
-
-
-
-  <!-- Work Experience -->
-  <h1>Work Experience</h1>
-  <p>Start with most recent positions.</p>
-  <div class="accordion" id="accordionWorkExperience">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="workExperience-headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseOne" aria-expanded="true" aria-controls="workExperience-collapseOne">
-          Employer #1
-        </button>
-      </h2>
-      <div id="workExperience-collapseOne" class="accordion-collapse collapse show" aria-labelledby="workExperience-headingOne">
-        <div class="accordion-body">
-          <form class="employer" id="employerOne">
-            <label for="employerOneInputName" class="form-label">Employer Name</label>
-            <input type="text" aria-label="Employer Name" class="form-control" id="employerOneInputName" placeholder="Employer Name">
-
-            <label for="employerOneInputPosition" class="form-label mt-3">Position</label>
-            <input type="text" aria-label="Position" class="form-control" id="employerOneInputPosition" placeholder="Position">
-
-            <label class="form-label mt-3">Supervisor Name and Title</label>
-            <div class="input-group">
-              <input type="text" aria-label="Supervisor Name" class="form-control" id="employerOneSupervisorName" placeholder="Supervisor Name">
-              <input type="text" aria-label="Supervisor Title" class="form-control" id="employerOneSupervisorTitle" placeholder="Supervisor Title">
-            </div>
-
-            <label class="form-label mt-3"> Start Date and End Date</label>
-            <div class="input-group">
-              <input type="date" aria-label="Start Date" class="form-control" id="employerOneStartDate">
-              <input type="date" aria-label="Start Date" class="form-control" id="employerOneEndDate">
-            </div>
-
-            <label for="employerOneReasonForLeaving" class="form-label mt-3">Reason for leaving</label>
-            <input type="text" aria-label="Reason for leaving" id="employerOneReasonForLeaving" class="form-control" placeholder="Reason for leaving">
-
-            <label for="employerOneDuties" class="form-label mt-3">Specific Duties</label>
-            <textarea type="text" name="" aria-label="Specific Duties" id="employerOneDuties" class="form-control" placeholder="Specific Duties"></textarea>
-
-            <label for="employerOneInputPhone" class="form-label mt-3">Phone Number</label>
-            <div class="input-group">
-              <span class="input-group-text">#</span>
-              <input type="tel" class="form-control" id="employerOneInputPhone" placeholder="888-888-8888">
-            </div>
-            <div class="form-text">If your employer is outside the USA please prefix the number with the appropriate country code.</div>
-
-            <div class="mt-3">May we contact this employer? (leave unchecked for no)</div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="employerOneContactPermission" value="TRUE">
-              <label class="form-check-label" for="employerOneContactPermission">Yes</label>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="workExperience-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseTwo" aria-expanded="false" aria-controls="workExperience-collapseTwo">
-          Employer #2
-        </button>
-      </h2>
-      <div id="workExperience-collapseTwo" class="accordion-collapse collapse" aria-labelledby="workExperience-headingTwo">
-        <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="workExperience-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseThree" aria-expanded="false" aria-controls="workExperience-collapseThree">
-          Employer #3
-        </button>
-      </h2>
-      <div id="workExperience-collapseThree" class="accordion-collapse collapse" aria-labelledby="workExperience-headingThree">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="workExperience-headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workExperience-collapseFour" aria-expanded="false" aria-controls="workExperience-collapseFour">
-          Employer #3
-        </button>
-      </h2>
-      <div id="workExperience-collapseFour" class="accordion-collapse collapse" aria-labelledby="workExperience-headingFour">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!--  Educational Experience -->
-  <h1 class="mt-3">Educational Experience</h1>
-  <div class="accordion" id="accordionEducationalExperience">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="educationalExperience-headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseOne" aria-expanded="true" aria-controls="educationalExperience-collapseOne">
-          Educational Institution #1
-        </button>
-      </h2>
-      <div id="educationalExperience-collapseOne" class="accordion-collapse collapse show" aria-labelledby="educationalExperience-headingOne">
-        <div class="accordion-body">
-          <form action="" class="education" id="educationOne">
-            <label for="educationOneInputName" class="form-label">Name of School</label>
-            <input type="text" aria-label="Name of School" class="form-control" id="educationOneInputName" placeholder="Name of School">
-
-            <label for="educationOneInputLocation" class="form-label mt-3">Position</label>
-            <input type="text" aria-label="Position" class="form-control" id="educationOneInputLocation" placeholder="Location">
-
-            <label for="educationOneInputDegree" class="form-label mt-3">Degree Received</label>
-            <input type="text" aria-label="Degree Received" class="form-control" id="educationOneInputDegree" placeholder="Degree Received">
-
-            <label for="educationOneInputFieldOfStudy" class="form-label mt-3">Field of Study</label>
-            <input type="text" aria-label="Field of Study" class="form-control" id="educationOneInputFieldOfStudy" placeholder="Field of Study">
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="educationalExperience-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseTwo" aria-expanded="false" aria-controls="educationalExperience-collapseTwo">
-          Educational Institution #2
-        </button>
-      </h2>
-      <div id="educationalExperience-collapseTwo" class="accordion-collapse collapse" aria-labelledby="educationalExperience-headingTwo">
-        <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="educationalExperience-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseThree" aria-expanded="false" aria-controls="educationalExperience-collapseThree">
-          Educational Institution #3
-        </button>
-      </h2>
-      <div id="educationalExperience-collapseThree" class="accordion-collapse collapse" aria-labelledby="educationalExperience-headingThree">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="educationalExperience-headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationalExperience-collapseFour" aria-expanded="false" aria-controls="educationalExperience-collapseFour">
-          Educational Institution #3
-        </button>
-      </h2>
-      <div id="educationalExperience-collapseFour" class="accordion-collapse collapse" aria-labelledby="educationalExperience-headingFour">
-        <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
 </div>
 
+<footer>
+  <div class="text-center container">
+    <p>PLEASE DO NOT APPLY MORE THAN ONCE PER SEASON. You may email application changes to info@yellowstonejobs.com.
+      A positive letter of recommendation is required and must be sent before you can begin employment. A background check is also a condition of employment and will be done on every employee. Send letter of recommendation to:</p>
+    <p>Yellowstone National Park Lodges, Human Resource</p>
+    <p>PO Box 165, YNP</p>
+    <p>WY 82190</p>
+    <p>Telephone: (307) 344- 5324  &nbsp;&nbsp;&nbsp;   FAX: (307) 344 - 5441  &nbsp;&nbsp;&nbsp;   E-mail: info@yellowstonejobs.com</p>
+  </div>
+</footer>
 
 
 

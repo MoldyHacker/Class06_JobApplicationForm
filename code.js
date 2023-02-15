@@ -1,9 +1,11 @@
 let today = new Date().toISOString().split('T')[0];
-if(today === '2023-02-08'){
-    ourClassroom += 1;
-}
 
 $('.date').append(today);
+
+let dOB = $('#dateOfBirth').val().valueOf();
+
+// let age = new Date(today - new Date(dOB)).getUTCFullYear() - 1970;
+
 
 $('body').on('click', function () {
     if ($('#driversLicenseCheckbox').is(':checked') === true)
@@ -11,5 +13,34 @@ $('body').on('click', function () {
     else
         $('#driversLicenseInfo').addClass('visually-hidden')
 
+    if($('#canProvideEligibilityProof').is(':checked') === true)
+        $('#isEligibleToWork').removeClass('visually-hidden')
+    else
+        $('#isEligibleToWork').addClass('visually-hidden')
+
+    if($('#isConvictedOfAFelony').is(':checked') === true)
+        $('#convictedFelon').removeClass('visually-hidden')
+    else
+        $('#convictedFelon').addClass('visually-hidden')
+
+    if($('#previousResortWork').is(':checked') === true)
+        $('#resortsWork').removeClass('visually-hidden')
+    else
+        $('#resortsWork').addClass('visually-hidden')
+
+    if($('#previousResortWorkDiffName').is(':checked') === true)
+        $('#resortsWorkDiffName').removeClass('visually-hidden')
+    else
+        $('#resortsWorkDiffName').addClass('visually-hidden')
+
+    if($('#relatedToNPSWorker').is(':checked') === true)
+        $('#relatedNPSWorker').removeClass('visually-hidden')
+    else
+        $('#relatedNPSWorker').addClass('visually-hidden')
+
+    if($('#rvIsGood').is(':checked') === true)
+        $('#rvCheck').removeClass('visually-hidden')
+    else
+        $('#rvCheck').addClass('visually-hidden')
 })
 
